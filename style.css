@@ -1,0 +1,423 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+*::selection {
+    color: white;
+    background-color: black;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: rgb(246, 248, 248);
+}
+
+.page1 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 0 2vw;
+    padding-top: 14vw;
+
+}
+
+.page1 h1 {
+    font-family: 'futura';
+    text-transform: uppercase;
+    font-size: 32vh;
+    line-height: 29vh;
+}
+
+.video-container {
+    height: 100vh;
+    width: 100%;
+    margin-top: 1vw;
+    position: relative;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.video-container .play {
+    position: fixed;
+    background-color: black;
+    padding: 2vw 1.5vw;
+    color: white;
+    font-family: futura;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+
+.page2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw 1vw;
+    align-items: center;
+}
+
+.page2 .elem {
+    position: relative;
+    height: 100%;
+    width: 31%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page2 .elem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.elem .dets {
+    height: 50px;
+    width: 70%;
+    position: absolute;
+    background-color: rgb(90, 87, 85);
+    z-index: 9;
+    border-radius: 40px;
+}
+
+.elem .dets:hover {
+    background-color: rgb(90, 87, 85);
+    color: rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+    height: 15vh;
+    cursor: pointer;
+}
+.dets .normal-text {
+    font-size: 1.4rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* Hide text by default */
+.dets .dets-text {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* Show text on hover */
+.elem .dets:hover .dets-text {
+    opacity: 1;
+}
+
+.page3 {
+    min-height: 120vh;
+    width: 100%;
+    background-color: rgb(246, 248, 248);
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+}
+
+.child {
+    height: 55vh;
+    width: 35vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0vw 5vw;
+}
+
+.page3 .child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page4 {
+    margin-top: 10vh;
+    min-height: 10vh;
+    width: 100%;
+    position: relative;
+    background-color: rgb(246, 248, 248);
+}
+.page4 h1 {
+    font-family: 'futura';
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    margin-top: 2vh;
+}
+.page4 p {
+    font-family: 'futura';
+    font-size: 1rem;
+    line-height: 1.2rem;
+    text-align: center;
+    margin-top: 1vh;
+}
+.page4 svg{
+    width: 20%;
+    height: 100%;
+    display: block;
+    margin: 1rem auto;
+}
+.cursor {
+    height: 150px;
+    width: 150px;
+    background-color: rgba(196, 183, 191, 0.814);
+    border-radius: 50%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 9999;
+    /* Make sure cursor is on top */
+    pointer-events: none;
+    /* So it doesn't block mouse events */
+}
+
+.nav-part1 {
+    height: 83px;
+    overflow: hidden;
+}
+
+.nav-part1 svg {
+    display: block;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+
+    z-index: 99;
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.nav .nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: cen;
+    gap: 40px;
+}
+
+.links {
+    padding: 10px;
+
+}
+
+.nav-part2 .links a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    margin: 0 30px;
+
+}
+
+.icons {
+    padding: 10px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.nav-part2 .icons i {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 600px) {
+
+    .page1 h1 {
+        font-size: 15vw;
+        line-height: 15vw;
+        letter-spacing: -3px;
+        margin-top: 4vh;
+
+    }
+
+    .page1 {
+
+        width: 100%;
+        min-height: 60vh;
+        padding: 0 3vw;
+        padding-top: 24vw;
+
+    }
+
+    .video-container {
+        height: 25vh;
+        margin-top: 5vw;
+        position: relative
+    }
+
+    .video-container .play {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        background-color: black;
+        padding: 6vw 4vw;
+        color: white;
+        font-family: futura;
+        border-radius: 50%;
+        opacity: 1;
+        scale: 1;
+    }
+
+    .page2 {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 5vw 3vw;
+        align-items: center;
+        gap: 1vh;
+        flex-direction: column;
+    }
+
+    .page2 .elem {
+
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .page2 .elem img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .page3 {
+        min-height: 120vh;
+        width: 100%;
+        background-color: rgb(246, 248, 248);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    .child {
+        height: auto;
+        min-height: 30vh;
+        width: 90vw;
+        padding: 4vw;
+        /* much smaller padding */
+        margin-bottom: 4vw;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .page3 .child img {
+        width: 100%;
+        height: auto;
+        max-height: 40vh;
+        object-fit: cover;
+    }
+
+    .cursor {
+        height: 150px;
+        width: 150px;
+        background-color: rgba(196, 183, 191, 0.814);
+        border-radius: 50%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        transform: translate(-50%, -50%) scale(0);
+        z-index: 9999;
+        /* Make sure cursor is on top */
+        pointer-events: none;
+        /* So it doesn't block mouse events */
+    }
+
+    .nav-part1 {
+        height: 83px;
+        overflow: hidden;
+    }
+
+    .nav-part1 svg {
+        display: block;
+    }
+
+    .nav {
+        position: fixed;
+        width: 100%;
+
+        z-index: 99;
+        padding: 25px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .nav .nav-part2 {
+        display: flex;
+        align-items: center;
+        justify-content: cen;
+        gap: 40px;
+    }
+
+    .links {
+        padding: 10px;
+        display: none;
+    }
+
+    .nav-part2 .links a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #333;
+        font-weight: 400;
+        margin: 0 30px;
+
+    }
+
+    .icons {
+        padding: 10px;
+        background-color: white;
+        border-radius: 50px;
+    }
+
+    .nav-part2 .icons i {
+        font-size: 1.5rem;
+        color: #333;
+        margin: 0 20px;
+        cursor: pointer;
+    }
+
+}
